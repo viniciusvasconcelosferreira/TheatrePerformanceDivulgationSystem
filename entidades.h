@@ -32,7 +32,7 @@ private:
     Classificacao classificacao;
 public:
     void getPeca(Codigo *codigo_peca,Nome *nome_peca,Tipo *tipo_peca,Classificacao *classificacao_peca);
-    void setPeca(string novo_codigo,string novo_nome,int novo_tipo,string nova_classificacao);
+    void setPeca(string novo_codigo,string novo_nome,string novo_tipo,string nova_classificacao);
 };
 
 class Sessao {
