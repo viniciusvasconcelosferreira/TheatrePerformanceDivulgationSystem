@@ -20,7 +20,7 @@ private:
     Cargo cargo;
 public:
     void getParticipante(Matricula *matricula_partipante, Nome *nome_participante, Nome *sobrenome_participante, Email *email_participante, Telefone *telefone_participante, Senha *senha_participante, Cargo *cargo_participante);
-    void setParticipante(string novo_nome,string novo_sobrenome,string novo_email,string novo_telefone,string senha, int novo_cargo);
+    void setParticipante(string novo_nome,string novo_sobrenome,string novo_email,string novo_telefone,string senha, string novo_cargo);
 
 };
 
@@ -51,8 +51,8 @@ private:
     Nome nome;
     Capacidade capacidade;
 public:
-    void getCapacidade(Codigo *codigo_sala,Nome *nome_sessao,Capacidade *capacidade_sessao);
-    void setCapacidade(string novo_codigo,string novo_nome,int nova_capacidade);
+    void getSala(Codigo *codigo_sala,Nome *nome_sessao,Capacidade *capacidade_sessao);
+    void setSala(string novo_codigo,string novo_nome,int nova_capacidade);
 };
 
 

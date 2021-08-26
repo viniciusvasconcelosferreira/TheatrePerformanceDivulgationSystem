@@ -70,13 +70,14 @@ public:
 
 class Cargo {
 private:
-    int cargo;
-    void validar(int) throw (invalid_argument);
+    const static string cargos[6] = {"ator", "cenógrafo", "figurinista", "maquiador", "sonoplasta", "iluminador"};
+    string cargo;
+    void validar(string) throw (invalid_argument);
 public:
-    int getCargo() {
+    string getCargo() {
         return cargo;
     }
-    void setCargo(int) throw (invalid_argument);
+    void setCargo(string) throw (invalid_argument);
 };
 
 class Codigo {
