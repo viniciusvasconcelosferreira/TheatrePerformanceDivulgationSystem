@@ -14,12 +14,12 @@ void Matricula::setMatricula(int nova_matricula) throw (invalid_argument) {
     matricula = nova_matricula;
 }
 
-bool Matricula::hasDuplicates(int nova_matricula){
+bool Matricula::hasDuplicates(int nova_matricula) {
     int aux_init[10] = {0};
 
     if(nova_matricula) return true;
 
-    while(nova_matricula != 0){
+    while(nova_matricula != 0) {
         if(aux_init[nova_matricula%10]) return true;
         aux_init[nova_matricula%10] = 1;
         nova_matricula /= 10;
@@ -36,11 +36,11 @@ void Matricula::validar(int nova_matricula) throw (invalid_argument) {
         SUCESSO_TAMANHO = 1;
     }
 
-    if(nova_matricula == 00000 || nova_matricula == 11111 || nova_matricula == 22222 || nova_matricula == 33333 || nova_matricula == 44444 || nova_matricula == 55555 || nova_matricula == 66666 || nova_matricula == 77777 || nova_matricula == 88888 || nova_matricula == 99999){
+    if(nova_matricula == 00000 || nova_matricula == 11111 || nova_matricula == 22222 || nova_matricula == 33333 || nova_matricula == 44444 || nova_matricula == 55555 || nova_matricula == 66666 || nova_matricula == 77777 || nova_matricula == 88888 || nova_matricula == 99999) {
         SUCESSO_REPETICAO = 1;
     }
 
-    if(SUCESSO_REPETICAO != 0 && SUCESSO_TAMANHO != 0 && hasDuplicates(nova_matricula) == true){
+    if(SUCESSO_REPETICAO != 0 && SUCESSO_TAMANHO != 0 && hasDuplicates(nova_matricula) == true) {
         throw invalid_argument("Matricula invalida!");
     }
 
@@ -145,12 +145,34 @@ void Telefone::setTelefone(string novo_telefone) throw (invalid_argument) {
 }
 //TODO: FAZER DEPOIS
 void Telefone::validar(string novo_telefone) throw (invalid_argument) {
-    int SUCESSO_CODIGO = 0;
+    string dd = telefone.substr(0,2);
+    string numero = telefone.substr(2);
+    //int dd_convertido = stoi(dd);
+//    int numero_convertido = stoi(numero);
+    int SUCESSO_CODIGO = 1;
     int SUCESSO_NUMERO = 0;
-    int codigos[66] = {11, 12, 13, 14, 15, 16, 17, 18, 19, 21, 22, 24, 27, 28, 32, 33,
-                       34, 35, 37, 38, 41, 42, 43, 44, 45, 46, 47, 48, 49, 51, 53, 54, 55, 61, 62, 63, 64, 65, 66, 67, 68,
-                       69, 71, 73, 74, 75, 77, 79, 81, 82, 83, 84, 85, 86, 87, 88, 89, 91, 92, 93, 94, 95, 96, 97, 98, 99
-                      };
+//    int codigos[66] = {11, 12, 13, 14, 15, 16, 17, 18, 19, 21, 22, 24, 27, 28, 32, 33,
+//                       34, 35, 37, 38, 41, 42, 43, 44, 45, 46, 47, 48, 49, 51, 53, 54, 55, 61, 62, 63, 64, 65, 66, 67, 68,
+//                       69, 71, 73, 74, 75, 77, 79, 81, 82, 83, 84, 85, 86, 87, 88, 89, 91, 92, 93, 94, 95, 96, 97, 98, 99
+//                      };
+    string codigos[66] = {"11", "12", "13", "14", "15", "16", "17", "18", "19", "21", "22", "24", "27", "28", "32", "33", "34", "35", "37", "38", "41", "42", "43", "44", "45", "46", "47", "48", "49", "51", "53", "54", "55", "61", "62", "63", "64", "65", "66", "67", "68", "69", "71", "73", "74", "75", "77", "79", "81", "82", "83", "84", "85", "86", "87", "88", "89", "91", "92", "93", "94", "95", "96", "97", "98", "99"};
+
+    for(int i = 0; i < 66; i++) {
+        if(codigos[i] == dd) {
+            SUCESSO_CODIGO = 0;
+            break;
+        }
+    }
+
+    if(numero.size() > LIMITE) {
+        SUCESSO_NUMERO = 1;
+    }
+
+    if(SUCESSO_CODIGO != 0 && SUCESSO_NUMERO != 0){
+        throw invalid_argument("Numero invalido!");
+    }
+
+
 }
 
 void Senha::setSenha(string nova_senha) throw (invalid_argument) {
@@ -408,14 +430,14 @@ void Horario::validar(string novo_horario) throw (invalid_argument) {
 
 }
 
-void Capacidade::setCapacidade(int nova_capacidade) throw (invalid_argument){
+void Capacidade::setCapacidade(int nova_capacidade) throw (invalid_argument) {
     validar(nova_capacidade);
     capacidade = nova_capacidade;
 }
-void Capacidade::validar(int nova_capacidade) throw (invalid_argument){
+void Capacidade::validar(int nova_capacidade) throw (invalid_argument) {
     int SUCESSO = 0;
 
-    if(nova_capacidade != 100 || nova_capacidade != 200 || nova_capacidade != 300 || nova_capacidade != 400 || nova_capacidade != 500){
+    if(nova_capacidade != 100 || nova_capacidade != 200 || nova_capacidade != 300 || nova_capacidade != 400 || nova_capacidade != 500) {
         throw invalid_argument("Capacidade invalida!");
     }
 }

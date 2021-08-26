@@ -20,7 +20,7 @@ private:
     Cargo cargo;
 public:
     void getParticipante(Matricula *matricula_partipante, Nome *nome_participante, Nome *sobrenome_participante, Email *email_participante, Telefone *telefone_participante, Senha *senha_participante, Cargo *cargo_participante);
-    void setParticipante(string novo_nome,string novo_sobrenome,string novo_email,string novo_telefone,string senha, string novo_cargo);
+    void setParticipante(string novo_nome,string novo_sobrenome,string novo_email,string novo_telefone,string nova_senha, string novo_cargo);
 
 };
 
