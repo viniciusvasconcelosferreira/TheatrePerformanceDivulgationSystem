@@ -9,15 +9,42 @@
 
 using namespace std;
 
-//TODO: VERIFICAR CLASS MATRICULA
 void Matricula::setMatricula(int nova_matricula) throw (invalid_argument) {
     validar(nova_matricula);
     matricula = nova_matricula;
 }
+
+bool Matricula::hasDuplicates(int nova_matricula){
+    int aux_init[10] = {0};
+
+    if(nova_matricula) return true;
+
+    while(nova_matricula != 0){
+        if(aux_init[nova_matricula%10]) return true;
+        aux_init[nova_matricula%10] = 1;
+        nova_matricula /= 10;
+    }
+
+    return false;
+}
+
 void Matricula::validar(int nova_matricula) throw (invalid_argument) {
+    int SUCESSO_TAMANHO = 0;
+    int SUCESSO_REPETICAO = 0;
+
     if(nova_matricula > LIMITE) {
+        SUCESSO_TAMANHO = 1;
+    }
+
+    if(nova_matricula == 00000 || nova_matricula == 11111 || nova_matricula == 22222 || nova_matricula == 33333 || nova_matricula == 44444 || nova_matricula == 55555 || nova_matricula == 66666 || nova_matricula == 77777 || nova_matricula == 88888 || nova_matricula == 99999){
+        SUCESSO_REPETICAO = 1;
+    }
+
+    if(SUCESSO_REPETICAO != 0 && SUCESSO_TAMANHO != 0 && hasDuplicates(nova_matricula) == true){
         throw invalid_argument("Matricula invalida!");
     }
+
+
 }
 
 void Nome::setNome(string novo_nome) throw (invalid_argument) {
@@ -223,9 +250,172 @@ void Codigo::validar(string novo_codigo) throw (invalid_argument) {
         SUCESSO_DIGITO = 1;
     }
 
-    if(SUCESSO_TAMANHO != 0 && SUCESSO_MAIUSCULA != 0 && SUCESSO_DIGITO != 0){
+    if(SUCESSO_TAMANHO != 0 && SUCESSO_MAIUSCULA != 0 && SUCESSO_DIGITO != 0) {
         throw invalid_argument("Codigo invalido!");
     }
 
 }
 
+void Tipo::setTipo(string novo_tipo) throw (invalid_argument) {
+    validar(novo_tipo);
+    tipo = novo_tipo
+}
+void Tipo::validar(string novo_tipo) throw (invalid_argument) {
+    int SUCESSO = 0;
+    int i;
+    for(i = 0; i < 9; i++) {
+        if(tipos[i] != novo_tipo) {
+            SUCESSO = 1;
+        }
+    }
+
+    if(SUCESSO !=0 ) {
+        throw invalid_argument("Tipo invalido!");
+    }
+
+}
+
+void Classificacao::setClassificacao(string nova_classificacao) throw (invalid_argument) {
+    validar(nova_classificacao);
+    classificacao = nova_classificacao
+}
+void Classificacao::validar(string nova_classificacao) throw (invalid_argument) {
+    int SUCESSO = 0;
+    int i;
+    for(i = 0; i < 6; i++) {
+        if(classificacoes[i] != nova_classificacao) {
+            SUCESSO = 1;
+        }
+    }
+
+    if(SUCESSO !=0 ) {
+        throw invalid_argument("Classificacao invalida!");
+    }
+
+}
+
+void Data::setData(string nova_data) throw (invalid_argument) {
+    int data_int = 0;
+
+    data_int = ((nova_data[5] - 48) + ((nova_data[4] - 48) *10) + ((nova_data[3] - 48)*100) + ((nova_data[2] - 48) * 1000) + ((nova_data[1] - 48) * 10000) + ((nova_data[0] - 48) * 100000)  );
+
+    validar(data_int);
+
+    int k;
+
+    for(k = 0; k<6 ; k++) {
+        data[k] = nova_data[k];
+    }
+
+    data[6] = '\0';
+}
+void Data::validar(int data_int) throw (invalid_argument) {
+
+    int SUCESSO = 0;
+
+    int num_dia = 0;
+    int num_mes = 0;
+    int num_ano = 0;
+
+    int ano_validar_bissexto = 0;
+    int fevereiro = 2;
+    int limite_dias_fevereiro_ano_bissexto = 29;
+
+    num_dia = data_int % 100;
+    data_int = data_int/100;
+
+    num_mes = data_int % 100;
+    data_int = data_int/100;
+
+    num_ano = data_int%100;
+    data_int = data_int/100;
+
+    if((num_dia > 31) || (num_dia <= 0)) {
+        SUCESSO = 1;
+    }
+    if((num_mes > 12) || (num_mes <= 0)) {
+        SUCESSO = 1;
+    }
+    if((num_ano > 99) || (num_ano <= 0)) {
+        SUCESSO = 1;
+    }
+
+    ano_validar_bissexto = num_ano + 2000;
+
+    if((ano_validar_bissexto % 4 == 0) && (ano_validar_bissexto % 100 != 0)) {
+        if((num_mes == fevereiro) && (num_dia > limite_dias_fevereiro_ano_bissexto)) {
+            SUCESSO = 1;
+        }
+    }
+
+    if(SUCESSO != 0) {
+        throw invalid_argument("Data invalida!");
+    }
+
+}
+
+void Horario::setHorario(string novo_horario) throw (invalid_argument) {
+    validar(novo_horario);
+
+    int i = 0;
+
+    while(i < LIMITE) {
+        horario[i] = novo_horario[i];
+        i++;
+    }
+
+    horario[LIMITE] = '\0';
+
+}
+void Horario::validar(string novo_horario) throw (invalid_argument) {
+
+    char HH[2];
+    int HHaux, MMaux;
+    char MM[2];
+    int i, j;
+
+    if(novo_horario[LIMITE] != '\0') {
+        throw invalid_argument("Formato invalido de horario (tamanho excedido)!");
+    }
+
+    for(i = 0; i < 2; i++) {
+        HH[i] = novo_horario[i];
+    }
+
+    HH[2] = '\0';
+    HHaux = atoi(HH);
+
+    for(j = 3; j < LIMITE; j++) {
+        MM[j-3] = novo_horario[j];
+    }
+    MM[2] = '\0';
+    MMaux = atoi(MM);
+
+    if(novo_horario[2] != ':') {
+
+        throw invalid_argument("Formato invalido de horario!");
+    }
+
+    if( HHaux < 0 ||  HHaux > 23 ) {
+
+        throw invalid_argument("HH invalido!");
+
+    }
+
+    if(MMaux != 0 || MMaux != 15 || MMaux != 30 || MMaux != 45) {
+        throw invalid_argument("MM invalido!");
+    }
+
+}
+
+void Capacidade::setCapacidade(int nova_capacidade) throw (invalid_argument){
+    validar(nova_capacidade);
+    capacidade = nova_capacidade;
+}
+void Capacidade::validar(int nova_capacidade) throw (invalid_argument){
+    int SUCESSO = 0;
+
+    if(nova_capacidade != 100 || nova_capacidade != 200 || nova_capacidade != 300 || nova_capacidade != 400 || nova_capacidade != 500){
+        throw invalid_argument("Capacidade invalida!");
+    }
+}

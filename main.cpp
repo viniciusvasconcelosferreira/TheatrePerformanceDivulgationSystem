@@ -6,28 +6,29 @@
 
 using namespace std;
 
-int main() {
-    int codigos[] = {11, 12, 13, 14, 15, 16, 17, 18, 19, 21, 22, 24, 27, 28, 32, 33,
-                     34, 35, 37, 38, 41, 42, 43, 44, 45, 46, 47, 48, 49, 51, 53, 54, 55, 61, 62, 63, 64, 65, 66, 67, 68,
-                     69, 71, 73, 74, 75, 77, 79, 81, 82, 83, 84, 85, 86, 87, 88, 89, 91, 92, 93, 94, 95, 96, 97, 98, 99
-                    };
-    string cargos[6] = {"ator", "cenógrafo", "figurinista", "maquiador", "sonoplasta", "iluminador"};
-    int tam;
-    tam = sizeof codigos / sizeof codigos[0];
+int hasDupes (unsigned int n) {
+    // Flag to indicate digit has been used, all zero to start.
+    int used[10] = {0};
 
-    string a;
-    string b;
+    // More than 10 digits must have duplicates, return true quickly.
+    if (n > 9999999999) return 1;
 
-    cout << "Digite o novo cargo: ";
-    cin >> a;
+    // Process each digit in number.
+    while (n != 0) {
+        // If duplicate, return true as soon as found.
+        if (used[n%10]) return 1;
 
-    b = a;
-
-    cout<<"O novo cargo é: "<<b<<endl;
-
-    for(int i = 0; i < 6; i++) {
-        cout<<cargos[i]<<endl;
+        // Otherwise, mark used, go to next digit.
+        used[n%10] = 1;
+        n /= 10;
     }
+
+    // No duplicates after checking all digits, return false.
+    return 0;
+}
+
+int main() {
+    cout << hasDupes(12355);
 
 
     return 0;

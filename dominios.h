@@ -93,19 +93,20 @@ public:
 
 class Tipo {
 private:
-    int tipo;
-    void validar(int) throw (invalid_argument);
+    const static string tipos[9] = {"auto", "comédia", "drama", "farsa", "melodrama", "monólogo", "musical", "ópera", "revista"};
+    string tipo;
+    void validar(string) throw (invalid_argument);
 public:
-    int getTipo() {
+    string getTipo() {
         return tipo;
     }
-    void setTipo(tipo) throw (invalid_argument);
+    void setTipo(string) throw (invalid_argument);
 };
 
 class Classificacao {
 private:
-    const static int LIMITE = 5;
-    char classificacao[LIMITE+1];
+    const static string classificacoes[6] = {"livre", "10", "12", "14", "16", "18"};
+    string classificacao;
     void validar(string) throw (invalid_argument);
 public:
     string getClassificacao() {
@@ -116,7 +117,7 @@ public:
 
 class Data {
 private:
-    const static int LIMITE = 8;
+    const static int LIMITE = 6;
     char data[LIMITE+1];
     void validar(int) throw (invalid_argument);
 public:

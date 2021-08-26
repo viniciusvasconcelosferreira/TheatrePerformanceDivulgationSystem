@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1629961685 source:d:\universidade de brasília (unb)\técnicas de programação 1\theatreperformancedivulgationsystem\main.cpp
+	<iostream>
+	<string>
+	<cstring>
+	<typeinfo>
+	<string.h>
+
