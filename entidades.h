@@ -9,7 +9,7 @@
 
 using namespace std;
 
-// Declaração de classe.
+///< Declaração de classe.
 
 ///
 /// Padr&atilde;o para representa&ccedil;&atilde;o da classe Participante.
@@ -17,7 +17,7 @@ using namespace std;
 
 class Participante {
 private:
-    // Atributo de classe.
+    ///< Atributo de classe.
     Matricula matricula;
     Nome nome;
     Nome sobrenome;
@@ -50,13 +50,13 @@ public:
 ///
 class Peca {
 private:
-    // Atributo de classe.
+    ///< Atributo de classe.
     Codigo identificador;
     Nome nome;
     Tipo tipo;
     Classificacao classificacao;
 public:
-    // Metodos de classe.
+    ///< Metodos de classe.
 
     ///
     /// Obt&eacute;m os dados da Pe&ccedil;a.
@@ -80,12 +80,12 @@ public:
 ///
 class Sessao {
 private:
-    // Atributo de classe.
+    ///< Atributo de classe.
     Codigo identificador;
     Data data;
     Horario horario;
 public:
-    // Metodos de classe.
+    ///< Metodos de classe.
 
     ///
     /// Obt&eacute;m os dados da Sess&atilde;o.
@@ -113,7 +113,7 @@ private:
     Nome nome;
     Capacidade capacidade;
 public:
-    // Metodos de classe.
+    ///< Metodos de classe.
 
     ///
     /// Obt&eacute;m os dados da Sala.

@@ -8,7 +8,7 @@
 
 using namespace std;
 
-// Declaração de classe.
+///< Declaração de classe.
 
 ///
 /// Padr&atilde;o para representa&ccedil;&atilde;o da classe Matricula.
@@ -22,12 +22,12 @@ using namespace std;
 
 class Matricula {
 private:
-    // Atributos de classe.
+    ///< Atributos de classe.
     int matricula;
-    const static int LIMITE = 99999; // Constante.
+    const static int LIMITE = 99999; ///< Constante.
     void validar(int) throw (invalid_argument);
 public:
-    // Metodos de classe.
+    ///< Metodos de classe.
 
     ///
     /// Obt&eacute;m os dados da Matricula.
@@ -61,7 +61,7 @@ public:
 
 class Nome {
 private:
-    // Atributos de classe.
+    ///< Atributos de classe.
     const static int LIMITE = 20;
     char nome[LIMITE+1];
     void validar(string) throw (invalid_argument);
@@ -100,7 +100,7 @@ public:
 
 class Email {
 private:
-    // Atributos de classe.
+    ///< Atributos de classe.
     const static int LIMITE = 319;
     char email[LIMITE+1];
     void validar(string) throw (invalid_argument);
@@ -138,7 +138,7 @@ public:
 
 class Telefone {
 private:
-    // Atributos de classe.
+    ///< Atributos de classe.
     const static int LIMITE = 11;
     char telefone[LIMITE+1];
     void validar(string) throw (invalid_argument);
@@ -177,7 +177,7 @@ public:
 
 class Senha {
 private:
-    // Atributos de classe.
+    ///< Atributos de classe.
     const static int LIMITE = 8;
     char senha[LIMITE+1];
     void validar(string) throw (invalid_argument);
@@ -213,7 +213,7 @@ public:
 
 class Cargo {
 private:
-    // Atributos de classe.
+    ///< Atributos de classe.
     const static string cargos[6] = {"ator", "cenógrafo", "figurinista", "maquiador", "sonoplasta", "iluminador"};
     string cargo;
     void validar(string) throw (invalid_argument);
@@ -250,7 +250,7 @@ public:
 
 class Codigo {
 private:
-    // Atributos de classe.
+    ///< Atributos de classe.
     const static int LIMITE = 6;
     char codigo[LIMITE+1];
     void validar(string) throw (invalid_argument);
@@ -285,7 +285,7 @@ public:
 
 class Tipo {
 private:
-    // Atributos de classe.
+    ///< Atributos de classe.
     const static string tipos[9] = {"auto", "comédia", "drama", "farsa", "melodrama", "monólogo", "musical", "ópera", "revista"};
     string tipo;
     void validar(string) throw (invalid_argument);
@@ -320,7 +320,7 @@ public:
 
 class Classificacao {
 private:
-    // Atributos de classe.
+    ///< Atributos de classe.
     const static string classificacoes[6] = {"livre", "10", "12", "14", "16", "18"};
     string classificacao;
     void validar(string) throw (invalid_argument);
@@ -359,7 +359,7 @@ public:
 
 class Data {
 private:
-    // Atributos de classe.
+    ///< Atributos de classe.
     const static int LIMITE = 6;
     char data[LIMITE+1];
     void validar(int) throw (invalid_argument);
@@ -396,7 +396,7 @@ public:
 
 class Horario {
 private:
-    // Atributos de classe.
+    ///< Atributos de classe.
     const static int LIMITE = 5;
     char horario[LIMITE+1];
     void validar(string) throw (invalid_argument);
@@ -431,7 +431,7 @@ public:
 
 class Capacidade {
 private:
-    // Atributos de classe.
+    ///< Atributos de classe.
     const static int LIMITE_INFERIOR = 100;
     const static int LIMITE_SUPERIOR = 500;
     int capacidade;

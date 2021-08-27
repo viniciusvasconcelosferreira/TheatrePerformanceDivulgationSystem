@@ -1,0 +1,62 @@
+D:/Universidade de Brasília (UnB)/Técnicas de Programação 1/TheatrePerformanceDivulgationSystem/dominios.cpp:29: warning: documented function `bool Matricula::hasDuplicates' was not declared or defined.
+D:/Universidade de Brasília (UnB)/Técnicas de Programação 1/TheatrePerformanceDivulgationSystem/dominios.h:450: warning: argument 'string' of command @param is not found in the argument list of Capacidade::setCapacidade(int nova_capacidade)
+D:/Universidade de Brasília (UnB)/Técnicas de Programação 1/TheatrePerformanceDivulgationSystem/dominios.h:450: warning: The following parameters of Capacidade::setCapacidade(int nova_capacidade) are not documented:
+  parameter 'nova_capacidade'
+D:/Universidade de Brasília (UnB)/Técnicas de Programação 1/TheatrePerformanceDivulgationSystem/dominios.h:231: warning: argument 'string' of command @param is not found in the argument list of Cargo::setCargo(string novo_cargo)
+D:/Universidade de Brasília (UnB)/Técnicas de Programação 1/TheatrePerformanceDivulgationSystem/dominios.h:231: warning: The following parameters of Cargo::setCargo(string novo_cargo) are not documented:
+  parameter 'novo_cargo'
+D:/Universidade de Brasília (UnB)/Técnicas de Programação 1/TheatrePerformanceDivulgationSystem/dominios.h:338: warning: argument 'string' of command @param is not found in the argument list of Classificacao::setClassificacao(string nova_classificacao)
+D:/Universidade de Brasília (UnB)/Técnicas de Programação 1/TheatrePerformanceDivulgationSystem/dominios.h:338: warning: The following parameters of Classificacao::setClassificacao(string nova_classificacao) are not documented:
+  parameter 'nova_classificacao'
+D:/Universidade de Brasília (UnB)/Técnicas de Programação 1/TheatrePerformanceDivulgationSystem/dominios.h:268: warning: argument 'string' of command @param is not found in the argument list of Codigo::setCodigo(string novo_codigo)
+D:/Universidade de Brasília (UnB)/Técnicas de Programação 1/TheatrePerformanceDivulgationSystem/dominios.h:268: warning: The following parameters of Codigo::setCodigo(string novo_codigo) are not documented:
+  parameter 'novo_codigo'
+D:/Universidade de Brasília (UnB)/Técnicas de Programação 1/TheatrePerformanceDivulgationSystem/dominios.h:377: warning: argument 'string' of command @param is not found in the argument list of Data::setData(string nova_data)
+D:/Universidade de Brasília (UnB)/Técnicas de Programação 1/TheatrePerformanceDivulgationSystem/dominios.h:377: warning: The following parameters of Data::setData(string nova_data) are not documented:
+  parameter 'nova_data'
+D:/Universidade de Brasília (UnB)/Técnicas de Programação 1/TheatrePerformanceDivulgationSystem/dominios.h:93: warning: Found unknown command `\dom'
+D:/Universidade de Brasília (UnB)/Técnicas de Programação 1/TheatrePerformanceDivulgationSystem/dominios.h:118: warning: argument 'string' of command @param is not found in the argument list of Email::setEmail(string novo_email)
+D:/Universidade de Brasília (UnB)/Técnicas de Programação 1/TheatrePerformanceDivulgationSystem/dominios.h:118: warning: The following parameters of Email::setEmail(string novo_email) are not documented:
+  parameter 'novo_email'
+D:/Universidade de Brasília (UnB)/Técnicas de Programação 1/TheatrePerformanceDivulgationSystem/dominios.h:414: warning: argument 'string' of command @param is not found in the argument list of Horario::setHorario(string novo_horario)
+D:/Universidade de Brasília (UnB)/Técnicas de Programação 1/TheatrePerformanceDivulgationSystem/dominios.h:414: warning: The following parameters of Horario::setHorario(string novo_horario) are not documented:
+  parameter 'novo_horario'
+D:/Universidade de Brasília (UnB)/Técnicas de Programação 1/TheatrePerformanceDivulgationSystem/dominios.h:41: warning: argument 'int' of command @param is not found in the argument list of Matricula::setMatricula(int nova_matricula)
+D:/Universidade de Brasília (UnB)/Técnicas de Programação 1/TheatrePerformanceDivulgationSystem/dominios.h:41: warning: The following parameters of Matricula::setMatricula(int nova_matricula) are not documented:
+  parameter 'nova_matricula'
+D:/Universidade de Brasília (UnB)/Técnicas de Programação 1/TheatrePerformanceDivulgationSystem/dominios.h:79: warning: argument 'string' of command @param is not found in the argument list of Nome::setNome(string novo_nome)
+D:/Universidade de Brasília (UnB)/Técnicas de Programação 1/TheatrePerformanceDivulgationSystem/dominios.h:79: warning: The following parameters of Nome::setNome(string novo_nome) are not documented:
+  parameter 'novo_nome'
+D:/Universidade de Brasília (UnB)/Técnicas de Programação 1/TheatrePerformanceDivulgationSystem/entidades.h:37: warning: argument 'string' of command @param is not found in the argument list of Participante::setParticipante(string novo_nome, string novo_sobrenome, string novo_email, string novo_telefone, string nova_senha, string novo_cargo)
+D:/Universidade de Brasília (UnB)/Técnicas de Programação 1/TheatrePerformanceDivulgationSystem/entidades.h:37: warning: The following parameters of Participante::setParticipante(string novo_nome, string novo_sobrenome, string novo_email, string novo_telefone, string nova_senha, string novo_cargo) are not documented:
+  parameter 'novo_nome'
+  parameter 'novo_sobrenome'
+  parameter 'novo_email'
+  parameter 'novo_telefone'
+  parameter 'nova_senha'
+  parameter 'novo_cargo'
+D:/Universidade de Brasília (UnB)/Técnicas de Programação 1/TheatrePerformanceDivulgationSystem/entidades.h:68: warning: argument 'string' of command @param is not found in the argument list of Peca::setPeca(string novo_codigo, string novo_nome, string novo_tipo, string nova_classificacao)
+D:/Universidade de Brasília (UnB)/Técnicas de Programação 1/TheatrePerformanceDivulgationSystem/entidades.h:68: warning: The following parameters of Peca::setPeca(string novo_codigo, string novo_nome, string novo_tipo, string nova_classificacao) are not documented:
+  parameter 'novo_codigo'
+  parameter 'novo_nome'
+  parameter 'novo_tipo'
+  parameter 'nova_classificacao'
+D:/Universidade de Brasília (UnB)/Técnicas de Programação 1/TheatrePerformanceDivulgationSystem/entidades.h:125: warning: argument 'string' of command @param is not found in the argument list of Sala::setSala(string novo_codigo, string novo_nome, int nova_capacidade)
+D:/Universidade de Brasília (UnB)/Técnicas de Programação 1/TheatrePerformanceDivulgationSystem/entidades.h:125: warning: The following parameters of Sala::setSala(string novo_codigo, string novo_nome, int nova_capacidade) are not documented:
+  parameter 'novo_codigo'
+  parameter 'novo_nome'
+  parameter 'nova_capacidade'
+D:/Universidade de Brasília (UnB)/Técnicas de Programação 1/TheatrePerformanceDivulgationSystem/dominios.h:195: warning: argument 'string' of command @param is not found in the argument list of Senha::setSenha(string nova_senha)
+D:/Universidade de Brasília (UnB)/Técnicas de Programação 1/TheatrePerformanceDivulgationSystem/dominios.h:195: warning: The following parameters of Senha::setSenha(string nova_senha) are not documented:
+  parameter 'nova_senha'
+D:/Universidade de Brasília (UnB)/Técnicas de Programação 1/TheatrePerformanceDivulgationSystem/entidades.h:97: warning: argument 'string' of command @param is not found in the argument list of Sessao::setSessao(string novo_codigo, string nova_data, string novo_horario)
+D:/Universidade de Brasília (UnB)/Técnicas de Programação 1/TheatrePerformanceDivulgationSystem/entidades.h:97: warning: The following parameters of Sessao::setSessao(string novo_codigo, string nova_data, string novo_horario) are not documented:
+  parameter 'novo_codigo'
+  parameter 'nova_data'
+  parameter 'novo_horario'
+D:/Universidade de Brasília (UnB)/Técnicas de Programação 1/TheatrePerformanceDivulgationSystem/dominios.h:156: warning: argument 'string' of command @param is not found in the argument list of Telefone::setTelefone(string novo_telefone)
+D:/Universidade de Brasília (UnB)/Técnicas de Programação 1/TheatrePerformanceDivulgationSystem/dominios.h:156: warning: The following parameters of Telefone::setTelefone(string novo_telefone) are not documented:
+  parameter 'novo_telefone'
+D:/Universidade de Brasília (UnB)/Técnicas de Programação 1/TheatrePerformanceDivulgationSystem/dominios.h:303: warning: argument 'string' of command @param is not found in the argument list of Tipo::setTipo(string novo_tipo)
+D:/Universidade de Brasília (UnB)/Técnicas de Programação 1/TheatrePerformanceDivulgationSystem/dominios.h:303: warning: The following parameters of Tipo::setTipo(string novo_tipo) are not documented:
+  parameter 'novo_tipo'
