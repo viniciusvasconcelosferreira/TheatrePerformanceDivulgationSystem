@@ -1,3 +1,13 @@
+/**
+ * @file entidades.cpp
+ *
+ * @brief Arquivo com a declaração das entidades do programa
+ *
+ * @author Vinicius Ferreira
+ *
+ */
+
+
 #include "entidades.h"
 #include <string>
 #include <iostream>
